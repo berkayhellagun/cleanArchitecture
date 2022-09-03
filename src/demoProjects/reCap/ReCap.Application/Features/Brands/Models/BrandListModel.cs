@@ -1,5 +1,5 @@
 ﻿using Core.Persistence.Paging;
-using ReCap.Application.Features.Brands.Dtos;
+using ReCap.Application.Features.Brands.Dtos.BrandDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

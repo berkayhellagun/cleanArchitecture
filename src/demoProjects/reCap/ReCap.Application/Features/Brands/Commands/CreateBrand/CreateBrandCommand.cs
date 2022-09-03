@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using ReCap.Application.Features.Brands.Dtos;
+using ReCap.Application.Features.Brands.Dtos.BrandDtos;
 using ReCap.Application.Features.Brands.Rules;
 using ReCap.Application.Services.Repositories;
 using ReCap.Domain.Entities;

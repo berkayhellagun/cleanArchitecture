@@ -27,5 +27,14 @@ namespace ReCap.Application.Features.Brands.Rules
                 throw new BusinessException("Brand name exist!");
             }
         }
+
+        internal async Task BrandShouldExistWhenRequested(int id)
+        {
+            var result = await _brandRepository.GetAsync(b => b.Id == id);
+            if (result == null)
+            {
+                throw new BusinessException("Requested brand does not exist!");
+            }
+        }
     }
 }

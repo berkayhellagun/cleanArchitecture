@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Core.Persistence.Paging;
 using ReCap.Application.Features.Brands.Commands.CreateBrand;
-using ReCap.Application.Features.Brands.Dtos;
+using ReCap.Application.Features.Brands.Dtos.BrandDtos;
 using ReCap.Application.Features.Brands.Models;
 using ReCap.Domain.Entities;
 using System;
@@ -22,6 +22,7 @@ namespace ReCap.Application.Features.Brands.Profiles
             CreateMap<Brand, CreateBrandCommand>().ReverseMap();
             CreateMap<IPaginate<Brand>, BrandListModel>().ReverseMap();
             CreateMap<Brand, BrandListDto>().ReverseMap();
+            CreateMap<Brand, BrandGetByIdDto>().ReverseMap();
         }
     }
 }
