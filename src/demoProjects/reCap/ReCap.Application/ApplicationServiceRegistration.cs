@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Core.Application.Pipelines.Validation;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using ReCap.Application.Features.Brands.Rules;
 using System;
@@ -16,6 +18,9 @@ namespace ReCap.Application
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
             services.AddScoped<BrandBusinessRules>();
             return services;

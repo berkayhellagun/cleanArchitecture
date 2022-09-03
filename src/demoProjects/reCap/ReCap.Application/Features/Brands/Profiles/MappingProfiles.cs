@@ -21,6 +21,7 @@ namespace ReCap.Application.Features.Brands.Profiles
             // Command hold fields so we can use this map rules
             CreateMap<Brand, CreateBrandCommand>().ReverseMap();
             CreateMap<IPaginate<Brand>, BrandListModel>().ReverseMap();
+            CreateMap<Brand, BrandListDto>().ReverseMap();
         }
     }
 }
