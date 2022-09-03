@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Core.Persistence.Paging;
 using ReCap.Application.Features.Brands.Commands.CreateBrand;
 using ReCap.Application.Features.Brands.Dtos;
+using ReCap.Application.Features.Brands.Models;
 using ReCap.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ namespace ReCap.Application.Features.Brands.Profiles
             CreateMap<Brand, CreatedBrandDto>().ReverseMap();
             // Command hold fields so we can use this map rules
             CreateMap<Brand, CreateBrandCommand>().ReverseMap();
+            CreateMap<IPaginate<Brand>, BrandListModel>().ReverseMap();
         }
     }
 }
